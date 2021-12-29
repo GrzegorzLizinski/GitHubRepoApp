@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <data class = "RepoListFragmentBinding"/>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.fragments.RepoListFragment"
+    android:background="@color/orange_allegro">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/orgsImage"
+        app:layout_constraintBottom_toBottomOf="@+id/orgsImage"
+        android:id="@+id/orgsName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        tools:text="BLOCK"
+        />
+
+    <ImageView
+        android:id="@+id/orgsImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/repo_row"
+        tools:itemCount="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/orgsImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:id="@+id/progressBarGet"
+        style="@style/SpinKitView.Large.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/dark_grey"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

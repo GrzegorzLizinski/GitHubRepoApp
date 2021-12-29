@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GitHubRepoApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="orgs_name">List of repositories</string>
+    <string name="watchers_count">Watchers Count:</string>
+    <string name="updated_at">Updated at:</string>
+    <string name="created_at">Created at:</string>
+</resources>

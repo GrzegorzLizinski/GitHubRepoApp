@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.RepoDetailsFragment">
+
+    <data class = "RepoDetailsBinding"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/repoNameDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="18sp"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            tools:text="block"/>
+
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repoNameDetails"
+            android:id="@+id/repoFullNameDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="16sp"
+
+            android:paddingStart="10dp"
+            tools:text="block"/>
+
+        <TextView
+            android:id="@+id/repoDescriptionDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/repoFullNameDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@tools:sample/lorem"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/repoHtmlDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/repoDescriptionDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@tools:sample/lorem"
+            android:padding="5dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            />
+
+        <TextView
+            android:id="@+id/languageDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/repoHtmlDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Python"
+            />
+
+
+        <TextView
+            android:id="@+id/watchersDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@+id/languageDetails"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="666"
+            android:padding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/createdDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/watchersDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="right"
+            android:padding="5dp"
+            tools:text="@tools:sample/date/hhmmss" />
+
+        <TextView
+            android:id="@+id/updatedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/createdDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="right"
+            android:padding="5dp"
+            tools:text="@tools:sample/date/hhmmss" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
